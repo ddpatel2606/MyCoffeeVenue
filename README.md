@@ -10,13 +10,13 @@ ForeSquare NearbyVenue Listing Api
  - [Direct Venue Detail Listing API](https://api.foursquare.com/v2/venues/explore?&client_id=UJ11TJWKALZ2LZJ2WDVSJX4D4I1K143EFHP251FNGCXOQDDW&client_secret=FIZJXGGOUTQQR3GEXBB3ANLO51HR3DEZ52H13KFPE3WZINEX&v=20210115&section=Coffee&ll=51.55156175729713%2C-0.2964009493821721)
  
 ## Instructions
-- If you want to use your client secret and client Id 
+- If you want to use your client secret and client Id </br>
   Go to --> ```API.kt``` file
   
-  // Foursquare API client Id
+  // Foursquare API client Id</br>
   ```const val CLIENT_ID = "YOUR CLIENT ID"```
   
-  // Foursquare API client secret
+  // Foursquare API client secret</br>
   ```const val CLIENT_SECRET = "YOUR CLIENT SECRET"```
   
  ## Activities
@@ -54,10 +54,10 @@ ForeSquare NearbyVenue Listing Api
 ```MainActivity : Dark Mode```
 
 
-<img src="image/1.png" width="350"/>
+<img src="images/1.png" width="350"/>
 
 
 ```MainActivity : Light Mode```
 
 
-<img src="image/2.png" width="350"/>
+<img src="images/2.png" width="350"/>
