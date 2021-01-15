@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.dixitpatel.mycoffeevenue.model.NearByPlaceResponse.Item" />
+
+    </data>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="@dimen/dimen_300dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/dimen_12dp"
+            app:cardElevation="@dimen/dimen_0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_margin="@dimen/dimen_6dp"
+            app:cardBackgroundColor="@color/default_text_color_checked"
+            android:foreground="?android:selectableItemBackground"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:id="@+id/ivCard"
+                android:layout_height="@dimen/dimen_200dp">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/tvItemImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    app:paletteImage="@{item.venue.categories.get(0).iconUrl}"
+                    android:elevation="3dp"
+                    android:padding="@dimen/dimen_5dp"
+                    android:layout_marginTop="@dimen/dimen_4dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvItemName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimen_6dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center|bottom"
+                    android:lines="1"
+                    android:text="@{item.venue.name}"
+                    android:elevation="3dp"
+                    android:padding="@dimen/dimen_6dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvItemImage"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvItemAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center|bottom"
+                    android:text="@{item.venue.location.finalFormattedAddress}"
+                    android:padding="@dimen/dimen_4dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvItemName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvItemDistance"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text="@{item.venue.location.formattedDistance}"
+                    android:padding="@dimen/dimen_4dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvItemAddress"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+</layout>
+
