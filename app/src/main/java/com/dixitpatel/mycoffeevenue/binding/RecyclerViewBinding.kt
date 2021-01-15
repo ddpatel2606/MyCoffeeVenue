@@ -4,7 +4,7 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.dixitpatel.mycoffeevenue.extension.recyclerViewAnimate
-import com.dixitpatel.mycoffeevenue.model.Item
+import com.dixitpatel.mycoffeevenue.model.NearByPlaceResponse
 import com.dixitpatel.mycoffeevenue.ui.adapter.PlacesAdapter
 
 /**
@@ -31,7 +31,7 @@ object RecyclerViewBinding {
 
   @JvmStatic
   @BindingAdapter("adapterPlacesList")
-  fun bindAdapterPlacesList(view: RecyclerView, placesList: List<Item>?) {
+  fun bindAdapterPlacesList(view: RecyclerView, placesList: List<NearByPlaceResponse.Item>?) {
     placesList?.let{ itemList ->
       view.adapter?.let { adapter ->
         (adapter as PlacesAdapter).setPlacesList(itemList)

@@ -61,7 +61,7 @@
                 android:scrollbarStyle="outsideOverlay"
                 android:scrollbarThumbVertical="@drawable/scrollbar"
                 android:scrollbars="horizontal"
-                app:adapter="@{adapter}"
+                adapter="@{adapter}"
                 app:adapterPlacesList="@{vm.placesListLiveData}"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintBottom_toBottomOf="parent"
